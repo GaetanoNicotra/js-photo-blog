@@ -4,7 +4,7 @@
     padding: 10px;
 }
 
-.my-width{
+.my-width {
     width: 85%;
 }
 
@@ -45,10 +45,10 @@ body {
 
 /**CARD BODY**/
 
-.card:hover{
-cursor: pointer;
-transform: rotate(10deg);
-transition: 0.4s;
+.card:hover {
+    cursor: pointer;
+    transform: rotate(10deg);
+    transition: 0.4s;
 
 }
 

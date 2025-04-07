@@ -19,7 +19,7 @@ const generatoreCard = () => {
             const card = `
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div class="ping"><img src="./img/pin.svg" alt="ping"></div>
-                     <div class="card my-width ">
+                     <div class="card my-width">
                         <img src="${imageGenerate}" class="card-img-top my-padding " alt="image card">
                         <div class="card-body">
                             <p class="card-title text-data my-data">${dateGenerate}</p>
