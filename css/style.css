@@ -1,4 +1,4 @@
-/*-----UTILYTIES----- */
+/*-----UTILITIES----- */
 
 .my-padding {
     padding: 10px;
@@ -26,11 +26,11 @@ body {
     background-image: url(../img/cork.png);
 }
 
-/*-----PING-----*/
+/*---PING---*/
 .ping {
     width: 35px;
     position: absolute;
     z-index: 1;
     left: 26%;
-    top: 15%;
+    top: 17%;
 }
