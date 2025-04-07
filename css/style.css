@@ -1,11 +1,8 @@
-
 /*-----UTILYTIES----- */
 
-.my-padding{
+.my-padding {
     padding: 10px;
 }
-
-
 
 
 /*-----HEADER-----*/
@@ -17,12 +14,14 @@ header {
 h1 {
     font-family: Oswald;
     font-size: 80px;
-    padding: 15px;
+    font-weight: 400;
     color: black;
+    padding: 15px;
 }
+
 
 /*-----MAIN-----*/
 
-body{
+body {
     background-image: url(../img/cork.png);
 }
