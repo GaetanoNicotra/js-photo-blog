@@ -11,23 +11,25 @@ const cardContainer = document.querySelector('.card-container')
 
 const generatoreCard = () => {
 
-    axios.get('https://lanciweb.github.io/demo/api/pictures/').then(element => {
-        dateGenerate = element.data[0].date;
-        titleGenerate = element.data[0].title
-        console.log(dateGenerate)
-        const card = `<div class="row mt-5 mb-4 card-container">
+    for (let i = 0; i < 6; i++) {
+        axios.get('https://lanciweb.github.io/demo/api/pictures/').then(element => {
+            dateGenerate = element.data[i].date;
+            titleGenerate = element.data[i].title;
+            imageGenerate = element.data[i].url;
+            const card = `
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div><img class="ping" src="./img/pin.svg" alt="ping"></div>
-                    <div class="card">
-                        <img src="./img/nuvole-4k-4y7kl2qe79x3lcxi.webp" class="card-img-top my-padding" alt="...">
+                     <div class="card">
+                        <img src="${imageGenerate}" class="card-img-top my-padding" alt="...">
                         <div class="card-body">
                             <data class="card-title text-data">${dateGenerate}</data>
                             <p class="card-text">${titleGenerate}</p>
                         </div>
                     </div>
-                </div>
-            </div>`;
-        cardContainer.innerHTML = card;
-    })
+                </div>`;
+            cardContainer.innerHTML += card;
+        })
+    }
 }
+
 generatoreCard()
