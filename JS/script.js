@@ -18,7 +18,7 @@ const generatoreCard = () => {
             //creo l'elemento del DOM
             const card = `
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div><img class="ping" src="./img/pin.svg" alt="ping"></div>
+                    <div class="ping"><img src="./img/pin.svg" alt="ping"></div>
                      <div class="card">
                         <img src="${imageGenerate}" class="card-img-top my-padding" alt="image card">
                         <div class="card-body">

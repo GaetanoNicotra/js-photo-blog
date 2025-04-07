@@ -14,7 +14,7 @@ header {
 h1 {
     font-family: Edu tas Beginner;
     font-size: 80px;
-    font-weight: 600;
+    font-weight: 700;
     color: black;
     padding: 15px;
 }
@@ -28,11 +28,10 @@ body {
 
 /**PING**/
 .ping {
-    width: 35px;
-    position: absolute;
+    position: relative;
+    left: 45%;
+    top: 4%;
     z-index: 1;
-    left: 26%;
-    top: 17%;
 }
 
 /**CARD BODY**/
