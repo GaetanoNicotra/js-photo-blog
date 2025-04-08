@@ -12,11 +12,11 @@ const generatoreCard = () => {
         // effettuo una chiamata ajax all'API 
         axios.get('https://lanciweb.github.io/demo/api/pictures/').then(element => {
             //recupero le propietà che mi servono per generare le cards
-            dateGenerate = element.data[i].date;
-            titleGenerate = element.data[i].title;
-            imageGenerate = element.data[i].url;
+            let dateGenerate = element.data[i].date;
+            let titleGenerate = element.data[i].title;
+            let imageGenerate = element.data[i].url;
             //creo l'elemento del DOM
-            const card =  `
+            const card = `
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div class="ping"><img src="./img/pin.svg" alt="ping"></div>
                      <div class="card my-width">
@@ -29,21 +29,29 @@ const generatoreCard = () => {
                 </div>`;
             //inserisco l'elemento nel DOM
             cardContainer.innerHTML += card;
+
+
+            // creo l'effetto di overlay che dovrà
+            // verificarsi al click sulla foto
+
+            const imageOverlay = imageGenerate;
+            const imageClick = cardContainer.querySelectorAll('img')
+            imageClick.forEach(image => {
+                image.addEventListener('click', function () {
+                    imageOverlay.classList.remove('d-none');
+                });
+            })
         })
     }
 }
 // richiamo la funzione
 generatoreCard();
 
-
-// creo l'effetto di overlay che dovrà
-// verificarsi al click sulla foto
-
-const closeButton = document.getElementById('close');
+// creo l'evento di chiusura dell'overlay al click del bottone
 const imageOverlay = document.getElementById('image-overlay');
-
+const closeButton = document.getElementById('close');
 closeButton.addEventListener('click', function () {
-   
-    imageOverlay.classList.remove('d-none');
-    console.log('click')
-}) 
+    imageOverlay.classList.add('d-none');
+})
+
+
