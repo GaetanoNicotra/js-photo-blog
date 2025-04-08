@@ -34,7 +34,7 @@ const generatoreCard = () => {
             // creo l'effetto di overlay che dovrà
             // verificarsi al click sulla foto
 
-            const imageOverlay = imageGenerate;
+            const imageOverlay = document.getElementById('image-overlay');
             const imageClick = cardContainer.querySelectorAll('img')
             imageClick.forEach(image => {
                 image.addEventListener('click', function () {
