@@ -30,15 +30,16 @@ const generatoreCard = () => {
             //inserisco l'elemento nel DOM
             cardContainer.innerHTML += card;
 
-
             // creo l'effetto di overlay che dovrà
             // verificarsi al click sulla foto
-
             const imageOverlay = document.getElementById('image-overlay');
-            const imageClick = cardContainer.querySelectorAll('img')
+            const imageClick = cardContainer.querySelectorAll('img');
+            const closeButton = document.getElementById('close');
+
             imageClick.forEach(image => {
                 image.addEventListener('click', function () {
                     imageOverlay.classList.remove('d-none');
+                    closeButton.classList.remove('d-none');
                 });
             })
         })
@@ -50,8 +51,10 @@ generatoreCard();
 // creo l'evento di chiusura dell'overlay al click del bottone
 const imageOverlay = document.getElementById('image-overlay');
 const closeButton = document.getElementById('close');
+
 closeButton.addEventListener('click', function () {
     imageOverlay.classList.add('d-none');
+    closeButton.classList.add('d-none');
 })
 
 
