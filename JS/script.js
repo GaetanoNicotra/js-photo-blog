@@ -16,7 +16,7 @@ const generatoreCard = () => {
             titleGenerate = element.data[i].title;
             imageGenerate = element.data[i].url;
             //creo l'elemento del DOM
-            const card = `
+            const card =  `
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                     <div class="ping"><img src="./img/pin.svg" alt="ping"></div>
                      <div class="card my-width">
@@ -34,3 +34,16 @@ const generatoreCard = () => {
 }
 // richiamo la funzione
 generatoreCard();
+
+
+// creo l'effetto di overlay che dovrà
+// verificarsi al click sulla foto
+
+const closeButton = document.getElementById('close');
+const imageOverlay = document.getElementById('image-overlay');
+
+closeButton.addEventListener('click', function () {
+   
+    imageOverlay.classList.remove('d-none');
+    console.log('click')
+}) 
